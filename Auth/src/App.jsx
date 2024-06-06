@@ -6,6 +6,8 @@ import Products from "./pages/Products"
 import NotFound from "./pages/NotFound"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import Signup from "./auth/Signup"
+import Signin from "./auth/Signin"
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
       <Route path="/contact" element= {<Contact />} />
       <Route path="/products" element= {<Products />} />
       <Route path="/*" element= {<NotFound />} />
+      <Route path="/signup" element = {<Signup />} /> 
+      <Route path="/signin" element = {<Signin />} /> 
     </Routes>
     <Footer />
     </BrowserRouter>
