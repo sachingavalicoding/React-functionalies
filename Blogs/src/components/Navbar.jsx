@@ -1,65 +1,47 @@
-import logo from "/logo.png";
-import { RiMenu3Line } from "react-icons/ri";
 import { navItems } from "../data/data";
-import Button from "./Button"
+import { Link } from "react-router-dom";
+import { FcSearch } from "react-icons/fc";
+import { FaCircleUser, FaCartPlus } from "react-icons/fa6";
+import { RiMenu3Line } from "react-icons/ri";
+import { MdCancel } from "react-icons/md";
 import { useState } from "react";
-import { IoClose } from "react-icons/io5";
 const Navbar = () => {
-  const [navOpen, setNavOpen] = useState(false);
+  const [navOpen , setNavOpen] = useState(false);
   return (
-    <header className="w-full flex items-center fixed top-0 left-0 px-14 bg-transparent backdrop-blur-sm">
-      <div className="container flex items-center justify-between  mx-auto ">
-        <div className="flex items-center gap-2">
-          <img className="w-14" src={logo} alt="logo" />
-          <h2> VirtualR </h2>
+    <header className="w-full bg-white flex items-center   py-3 shadow-xl">
+      <div className="flex   container mx-auto px-4 lg:max-w-[1080px] justify-between gap-20 lg:gap-32  items-center">
+        <div className="">
+          <h3 className="px-4 py-2  border-2 border-slate-900 "> SHOPMAX </h3>
         </div>
-
-        <div className="flex xl:hidden">
-          {navOpen ? (
-            <IoClose
-              onClick={() => setNavOpen((prev) => !prev)}
-              className="text-3xl "
-            />
-          ) : (
-            <RiMenu3Line
-              onClick={() => setNavOpen((prev) => !prev)}
-              className="text-3xl "
-            />
-          )}
-        </div>
-
-        <nav className="hidden xl:flex items-center gap-8">
-          {navItems.map((ele, index) => (
-            <a key={index} href={ele.href}>
+        <nav className="hidden lg:flex gap-12">
+          {navItems.map(({ label, href }, index) => (
+            <Link key={index} to={href}>
               {" "}
-              {ele.label}{" "}
-            </a>
+              {label}{" "}
+            </Link>
           ))}
         </nav>
-        <div className="hidden xl:flex items-center gap-8">
-          <Button text={"Sign in "} />
-          <Button
-            text={"Create an account "}
-            classname={"bg-mainColor border-transparent"}
-          />
+        <div className="flex gap-6 text-xl ">
+          <FcSearch />
+          <FaCircleUser />
+          <FaCartPlus />
+          <RiMenu3Line className="flex lg:hidden" onClick={() => setNavOpen((prev) => !prev ) } />
         </div>
-
-        {/*  Small device navbar  */}
-        <div
-          className={` ${
-            navOpen ? "flex" : "hidden"
-          } w-full fixed top-16 left-0 flex xl:hidden flex-col items-center justify-center `}
-        >
-          {navItems.map((ele, index) => (
-            <a
-              className="w-full text-center px-4 py-3 bg-black hover:bg-slate-50 duration-300 hover:text-orange-500"
-              key={index}
-              href={ele.href}
-            >
-              {" "}
-              {ele.label}{" "}
-            </a>
-          ))}
+        {/* Side bar  */}
+        <div className=  {` ${navOpen ? "block" :"hidden"} w-96 h-screen fixed top-0 right-0 bg-white px-6 py-8 ">
+          <div className="flex items-center justify-between px-6> `} > 
+          <div className="flex items-center justify-between px-6">
+            <h2 className="text-4xl font-extrabold"> SHOPMAX </h2>
+            <MdCancel className="text-2xl " onClick={() => setNavOpen((prev) => !prev )} />
+          </div>
+          <nav className="flex gap-8 flex-col px-6 mt-12 ">
+            {navItems.map(({ label, href }, index) => (
+              <Link key={index} to={href}>
+                {" "}
+                {label}{" "}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
     </header>
