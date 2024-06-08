@@ -2,7 +2,7 @@ import Button from "../components/Button";
 
 const Home = () => {
   return (
-    <main className="w-full">
+    <main className="w-full ">
       {/* Background Image Section */}
       <section
         className="relative w-full md:h-[140rem] h-[50rem] bg-contain md:bg-cover  bg-no-repeat bg-top"
