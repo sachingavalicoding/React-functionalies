@@ -12,7 +12,7 @@ const Popular = () => {
             {
               popularProducts.map((item) => (
                 <li key={item.id}> 
-                 <Link to={`/${item.category}`}>  <Card image={item.image} title={item.title} price={item.price} oldPrice={item.oldPrice} categoary={item.category} rating={item.rating} /> </Link>
+                 <Link to={`/shop`}>  <Card image={item.image} title={item.title} price={item.price} oldPrice={item.oldPrice} categoary={item.category} rating={item.rating} /> </Link>
                  </li>
               ))
             }      
