@@ -15,7 +15,7 @@ export const popularProducts = [
     title: 'Elegant Women\'s Dress',
     price: 79.99,
     oldPrice: 99.99,
-    rating: 4.5,
+    rating: 3,
     category: 'women'
   },
   {
@@ -24,7 +24,7 @@ export const popularProducts = [
     title: 'Casual Men\'s Shirt',
     price: 49.99,
     oldPrice: 69.99,
-    rating: 4.0,
+    rating: 4.8,
     category: 'men'
   },
   {
@@ -33,7 +33,7 @@ export const popularProducts = [
     title: 'Stylish Women\'s ',
     price: 59.99,
     oldPrice: 89.99,
-    rating: 4.2,
+    rating: 5,
     category: 'women'
   },
   {
@@ -42,7 +42,7 @@ export const popularProducts = [
     title: 'Men\'s Running Shoes',
     price: 89.99,
     oldPrice: 119.99,
-    rating: 4.8,
+    rating: 5,
     category: 'men'
   },
   {
@@ -51,7 +51,7 @@ export const popularProducts = [
     title: 'Chic Women\'s ',
     price: 39.99,
     oldPrice: 59.99,
-    rating: 4.3,
+    rating: 5,
     category: 'women'
   },
   {
@@ -60,7 +60,7 @@ export const popularProducts = [
     title: 'Denim Men\'s Jeans',
     price: 69.99,
     oldPrice: 89.99,
-    rating: 4.1,
+    rating: 3,
     category: 'men'
   },
   {
@@ -69,7 +69,7 @@ export const popularProducts = [
     title: 'Warm Men T-shirt  ',
     price: 129.99,
     oldPrice: 159.99,
-    rating: 4.7,
+    rating: 4,
     category: 'women'
   },
   {
@@ -78,10 +78,47 @@ export const popularProducts = [
     title: 'Casual Men\'s Sneakers',
     price: 79.99,
     oldPrice: 99.99,
-    rating: 4.6,
+    rating: 3,
     category: 'men'
   }
 ];
 
-
+export const mostRatedProducts = [
+  {
+    id: 2,
+    image: '/data/popular/men-1.jpg',
+    title: 'Casual Men\'s Shirt',
+    price: 49.99,
+    oldPrice: 69.99,
+    rating: 5.0,
+    category: 'men'
+  },
+  {
+    id: 3,
+    image: '/data/popular/4213.jpg',
+    title: 'Stylish Women\'s ',
+    price: 59.99,
+    oldPrice: 89.99,
+    rating: 5,
+    category: 'women'
+  },
+  {
+    id: 4,
+    image: '/data/popular/3150.jpg',
+    title: 'Men\'s Running Shoes',
+    price: 89.99,
+    oldPrice: 119.99,
+    rating: 5,
+    category: 'men'
+  },
+  {
+    id: 5,
+    image: '/data/popular/3895.jpg',
+    title: 'Chic Women\'s ',
+    price: 39.99,
+    oldPrice: 59.99,
+    rating: 5,
+    category: 'women'
+  },
+]
 

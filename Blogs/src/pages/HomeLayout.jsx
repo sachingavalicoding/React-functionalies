@@ -1,5 +1,6 @@
 import Category from "../components/Category"
 import Popular from "../components/Popular"
+import Testimonial from "../components/Testimonial"
 import Home from "./Home"
 
 
@@ -9,6 +10,7 @@ const HomeLayout = () => {
     <Home />
     <Category />
     <Popular />
+    <Testimonial />
     </>
   )
 }

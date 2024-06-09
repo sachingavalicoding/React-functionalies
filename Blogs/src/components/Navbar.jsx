@@ -8,7 +8,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [navOpen , setNavOpen] = useState(false);
   return (
-    <header className="w-full bg-white flex items-center   py-3 shadow-xl">
+    <header className="w-full z-10 fixed top-0 left-0 bg-white flex items-center   py-3 shadow-xl">
       <div className="flex   container mx-auto px-4 lg:max-w-[1080px] justify-between gap-20 lg:gap-32  items-center">
         <div className="">
           <h3 className="px-4 py-2  border-2 border-slate-900 "> SHOPMAX </h3>
@@ -21,7 +21,7 @@ const Navbar = () => {
             </Link>
           ))}
         </nav>
-        <div className="flex gap-6 text-xl ">
+        <div className="flex gap-6 text-xl  ">
           <FcSearch />
           <FaCircleUser />
           <FaCartPlus />

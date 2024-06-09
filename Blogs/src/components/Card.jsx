@@ -11,11 +11,11 @@ const Card = ({ image, title, price, rating, oldPrice }) => {
           <p className="text-slate-700 line-through">{oldPrice}</p>
           <p className="text-slate-800 text-xl  ">{price}</p>
         </div>
-        <p className="flex items-center gap-2 ">
+        <p className="flex items-center gap-2  ">
          
         
          {
-          rating <= 3 ? (
+          rating <= 4 ? (
             <>
             <FaStar  className="text-yellow-500"/>
             <FaStar  className="text-yellow-500"/>
@@ -31,7 +31,7 @@ const Card = ({ image, title, price, rating, oldPrice }) => {
            <FaStar  className="text-yellow-500 "/>
            <FaStar  className="text-yellow-500 "/>
            <FaStar  className="text-yellow-500 "/>
-            <CiStar /> 
+           <FaStar  className="text-yellow-500 "/>
             </>)
          }
         </p>
