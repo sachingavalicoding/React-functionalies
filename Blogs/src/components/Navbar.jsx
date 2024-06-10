@@ -23,7 +23,7 @@ const Navbar = () => {
         </nav>
         <div className="flex gap-6 text-xl  ">
           <FcSearch />
-          <FaCircleUser />
+          <Link to={"/signup"}> <FaCircleUser  /></Link>
           <FaCartPlus />
           <RiMenu3Line className="flex lg:hidden" onClick={() => setNavOpen((prev) => !prev ) } />
         </div>
