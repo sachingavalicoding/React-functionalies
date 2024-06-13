@@ -2,16 +2,13 @@
      Sign in => login account 
 */
 import { Link } from "react-router-dom";
-import Button from "../components/Button";
+
 import { useState } from "react";
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- 
-  const handleForm = () => {
 
-  }
 
 
   
@@ -20,8 +17,11 @@ const Signup = () => {
       <div className="w-full min-h-screen bg-slate-200 flex items-center justify-center">
         <form
           action=""
-          className="w-[28rem] text-white mx-auto px-8 py-8 bg-black flex flex-col gap-4 "
+          className="w-[28rem] text-white mx-auto px-8 py-8 bg-black rounded-s-sm flex flex-col gap-4 "
         >
+          <div className="row w-full text-center text-2xl text-white">
+            <h2> Create an Account </h2>
+          </div>
           <div className="row flex flex-col w-full gap-2">
             <label htmlFor="username">Username</label>
             <input
@@ -30,6 +30,7 @@ const Signup = () => {
               placeholder="Enter name"
               onChange={(e) => setName(e.target.value)}
               value={name}
+              required
             />
           </div>
           <div className="row flex flex-col w-full gap-2 ">
@@ -40,6 +41,7 @@ const Signup = () => {
               placeholder="Enter email"
               onChange={(event) => setEmail(event.target.value)}
               value={email}
+              required
             />
           </div>
           <div className="row flex flex-col w-full gap-2">
@@ -50,25 +52,16 @@ const Signup = () => {
               placeholder="Enter password"
               onChange={(event) => setPassword(event.target.value)}
               value={password}
+              required
             />
           </div>
           <div className="row flex items-center justify-center mt-8  flex-col w-full gap-2">
-            <Link onClick={handleForm} to={""} >
-            <Button
-              text="Sign up"
-              classnames={
-                "bg-pink-600 px-10 hover:text-white hover:border-[1px] hover:border-pink-600 "
-              } 
-              
             
-            /></Link>
+           <button className=" py-2 rounded-sm border-[1px] border-transparent  text-slate-100 duration-300 ease-in  bg-pink-600 px-10 hover:text-white hover:border-[1px] hover:border-pink-600">  <Link  to={"/signin"} > Sign up  </Link> </button>
+           
           </div>
         </form>
-        <div className="flex w-96 mx0auto flex-col">
-          <h1> Name : {name} </h1>
-          <h1> email : {email} </h1>
-          <h1> password : {password} </h1>
-        </div>
+       
       </div>
     </>
   );
